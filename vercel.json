@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/auto-claim": {
-      "runtime": "vercel-python@3.9.x"
+      "runtime": "vercel-python@3.9.0"
     }
   }
 }
