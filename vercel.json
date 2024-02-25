@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/ac": {
+    "api/ac.py": {
       "runtime": "vercel-python@3.9.0"
     }
   }
