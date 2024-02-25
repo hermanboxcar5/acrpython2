@@ -1,12 +1,12 @@
-import os, requests, time, json
+import os
+import json
+import requests
+import time
 
-#https://dev-nakama.winterpixel.io/v2/rpc/collect_timed_bonus
+def handler(req, res):
+    username = os.environ['username']
+    password = os.environ['password']
 
-username = os.environ['username']
-password = os.environ['password']
-
-
-def auto_claim():
     while True:
         response = requests.post(
             "https://dev-nakama.winterpixel.io/v2/account/authenticate/email?create=false",
@@ -34,6 +34,4 @@ def auto_claim():
 
         time.sleep(1801)
 
-
-
-auto_claim()
+    return 'Success'
