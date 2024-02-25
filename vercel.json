@@ -1,3 +1,7 @@
 {
-  "redirects": [{ "source": "/", "destination": "/api" }]
+  "functions": {
+    "api/auto-claim": {
+      "runtime": "vercel-python@3.9"
+    }
+  }
 }
