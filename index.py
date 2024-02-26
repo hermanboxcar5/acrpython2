@@ -55,10 +55,8 @@ def last_request_time():
     else:
         return "No requests sent yet."
 
-if __name__ == "__main__":
-    # Start a background thread to claim timed bonus
-    claim_timed_bonus_thread = threading.Thread(target=claim_timed_bonus)
-    claim_timed_bonus_thread.start()
+# Remove the if __name__ == "__main__" block
 
-    # Run the Flask app
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+# Start a background thread to claim timed bonus
+claim_timed_bonus_thread = threading.Thread(target=claim_timed_bonus)
+claim_timed_bonus_thread.start()
