@@ -1,7 +1,7 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.py", "use": "@now/python", "config": { "runtime": "python3.9" } }
+    { "src": "index.py", "use": "@vercel/python", "config": { "runtime": "python3.9" } }
   ],
   "routes": [
     { "handle": "filesystem" },
