@@ -1,2 +1,2 @@
 [build]
-  command = "pip install requests && pip install Flask && pip install time && pip install json && python index.py"  # Adjust this if your Flask app file has a different name
+  command = "pip install requests && pip install Flask && python index.py"  # Adjust this if your Flask app file has a different name
