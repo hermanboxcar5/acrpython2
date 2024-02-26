@@ -1,7 +1,7 @@
 const { exec } = require('child_process');
 
 module.exports = (req, res) => {
-    exec('python ac.py', (error, stdout, stderr) => {
+    exec('python acp.py', (error, stdout, stderr) => {
         if (error) {
             console.error(`exec error: ${error}`);
             res.status(500).json({ error: 'Internal Server Error' });
