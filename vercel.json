@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/ac.js": {
-      "runtime": "nodejs16.0.0"
+
     }
   }
 }
