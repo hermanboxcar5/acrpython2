@@ -3,15 +3,17 @@ import requests
 import time
 import json
 import threading
+import logging
 
+logging.debug("Imports done")
 from flask import Flask
 tf=True
 app = Flask(__name__)
-
+logging.debug("Flask started")
 # Credentials
 username = os.environ.get('username')
 password = os.environ.get('password')
-
+logging.debug("Env done")
 last_request_timestamp = None
 
 def claim_timed_bonus():
@@ -46,9 +48,10 @@ def collect_timed_bonus(token):
         headers={"authorization": f"Bearer {token}"},
         data=payload.encode('utf-8'))
     return response
-
+logging.debug("3 functions done")
 @app.route('/')
 def last_request_time():
+    logging.debug("Entered last request")
     if tf:
         tf=False
         # Start a background thread to claim timed bonus
